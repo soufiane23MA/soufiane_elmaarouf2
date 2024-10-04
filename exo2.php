@@ -15,42 +15,36 @@ USA Washington</p>
 <h2>Resultat</h2>
 <?php
     
-    $capitales= ["France"=>"Paris",
-                "Allemagne"=>"Berlin",
-                "USA"=>"Washington",
-                "Italie"=>"Rome"
+    $capitales= ["France" =>"Paris",
+                "Allemagne" =>"Berlin",
+                "USA" =>"Washington",
+                "Italie" =>"Rome"
             ];
+function afficherTableHTML($capitales){
 
-                      function afficherTableHTML($capitales){
+   asort($capitales);// classer par ordre alphabétique!
 
 
-                    echo "<table>
-                    <thead>
-                    <tr>
-                    <td>Pays</td>
-                    <td>Capital</td>
-                    </tr>
-                    
-                    </thead>
-                    
-                    </table>";
+  echo "<table style='border: 1px solid black; border-collapse: collapse; width: 50%;'>";
+        echo "<tr>
+                <th style='border: 1px solid black; padding: 8px;'>Pays</th>
+                <th style='border: 1px solid black; padding: 8px;'>Capitale</th>
+            </tr>";
+        
 
-                foreach ($capitales as $pays => $capital){
+    foreach ($capitales as $pays => $capital){
 
-                $paysMaj = strtoupper($pays);
-                
-                echo "<table>
-            
-                    
-                        <td> $paysMaj</td>
-                        <td>$capital</td>
-                
-                    </table>";
+    $paysMaj = strtoupper($pays);
 
-                };
+     echo "<tr>";
+        echo "<td style='border: 1px solid black; padding: 8px;'>$paysMaj</td>";
+        echo "<td style='border: 1px solid black; padding: 8px;'>$capital</td>";
+        echo "</tr>";
 
-            };
-            echo afficherTableHTML($capitales);
+    };
 
-            
+    };
+    afficherTableHTML($capitales);
+
+
     ;
