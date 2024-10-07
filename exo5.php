@@ -10,16 +10,20 @@ afficherInput($nomsInput);</p>
 // je ne sais pas si naiceaaire,
 // de mettre le tous dans une balise <p></p>
 
-	$nomsInput = ["Nom","Prénom","Ville"];
-	
-	function afficherInput($nomsInput){
-			foreach($nomsInput as $input){
-        echo "<form method= 'get' action=''></form>";
-				echo "<label for='input'>$input</label> <br>" ;
-				echo "<input type='text' name='input' ><br>";
-			
+$nomsInput = ["Nom","Prénom","Ville"];
 
-			};
-			}; 
-			afficherInput($nomsInput);
+function afficherInput($nomsInput){
+
+	$result = "<form>";
+	foreach($nomsInput as $input){
+		echo "<label for='$input'>$input</label> <br>" ;
+		echo "<input type='text' name='input' id=$input><br>";
+	};
+
+	$result .= "</form>";
+
+	return $result;
+}; 
+
+echo afficherInput($nomsInput);
 

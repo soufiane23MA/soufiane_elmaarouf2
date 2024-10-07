@@ -34,31 +34,34 @@ USA Washington Lien</p>
 	 // ajouter la nouvelle variable avec l'ancre
 
 
-						echo "<table style='border: 1px solid black; border-collapse: collapse; width: 50%;'>";
-        echo "<tr>
-                <th style='border: 1px solid black; padding: 8px;'>Pays</th>
-                <th style='border: 1px solid black; padding: 8px;'>Capitale</th>
+                $result = "<table style='border: 1px solid black; border-collapse: collapse; width: 50%;'>";
+            $result .="<tr>
+                    <th style='border: 1px solid black; padding: 8px;'>Pays</th>
+                    <th style='border: 1px solid black; padding: 8px;'>Capitale</th>
 
-								<th style='border: 1px solid black; padding: 8px;'>Lien WIki</th>
-            </tr>";
-						foreach ($capitales as $pays => $capital){
+                    <th style='border: 1px solid black; padding: 8px;'>Lien WIki</th>
+              </tr>";
+                foreach ($capitales as $pays => $capital){
 
-    $paysMaj = strtoupper($pays);
-		$lien = "<a href='https://fr.wikipidia.org/wiki';";
+                      $paysMaj = strtoupper($pays);
+                      $lien = "<a href='https://fr.wikipidia.org/wiki';";
 
-     echo "<tr>";
-        echo "<td style='border: 1px solid black; padding: 8px;'>$paysMaj</td>";
-        echo "<td style='border: 1px solid black; padding: 8px;'>$capital</td>";
-				echo "<td style='border: 1px solid black; padding: 8px;'><a href= $lien target = _blank>LIEN</a></td>";
-        echo "</tr>";
-
-    };
-
-    };
-    afficherTableHTML($capitales);
+                        $result .= "<tr>";
+                        $result .= "<td style='border: 1px solid black; padding: 8px;'>$paysMaj</td>";
+                        $result .= "<td style='border: 1px solid black; padding: 8px;'>$capital</td>";
+                        $result .= "<td style='border: 1px solid black; padding: 8px;'><a href= $lien target = _blank>LIEN</a></td>";
+                    $result .="</tr>";
 
 
-    ;
+                };
+                  $result .= "</table>";
+
+            };
+
+            afficherTableHTML($capitales);
+
+
+          
 
 
 
