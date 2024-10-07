@@ -16,7 +16,7 @@ afficherInput($nomsInput);</p>
 			foreach($nomsInput as $input){
         echo "<form method= 'get' action=''></form>";
 				echo "<label for='input'>$input</label> <br>" ;
-				echo "<input type='text' name='input'><br>";
+				echo "<input type='text' name='input' ><br>";
 			
 
 			};

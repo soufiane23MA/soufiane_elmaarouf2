@@ -37,8 +37,8 @@ function afficherTableHTML($capitales){
     $paysMaj = strtoupper($pays);
 
      echo "<tr>";
-        echo "<td style='border: 1px solid black; padding: 8px;'>$paysMaj</td>";
-        echo "<td style='border: 1px solid black; padding: 8px;'>$capital</td>";
+        echo "<td style='border: 1px solid black; padding: 4px;'>$paysMaj</td>";
+        echo "<td style='border: 1px solid black; padding: 4px;'>$capital</td>";
         echo "</tr>";
 
     };
