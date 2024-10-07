@@ -10,6 +10,10 @@ vendredi 23 février 2018</p>
 
 <?php
 
+function formatDateFr (){
+    
+}
+
 
 
   

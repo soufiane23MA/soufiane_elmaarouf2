@@ -51,14 +51,14 @@ USA Washington Lien</p>
                         $result .= "<td style='border: 1px solid black; padding: 8px;'>$capital</td>";
                         $result .= "<td style='border: 1px solid black; padding: 8px;'><a href= $lien target = _blank>LIEN</a></td>";
                     $result .="</tr>";
-
-
-                };
+                  };
+                  
                   $result .= "</table>";
+                  return $result;
 
             };
 
-            afficherTableHTML($capitales);
+            echo afficherTableHTML($capitales);
 
 
           

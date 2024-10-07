@@ -16,17 +16,21 @@ genererCheckbox($elements);
 			"Choix 3" => true
 		];
 
-					function genererCheckbox($elements) {
-					echo " <form method = 'get' action= ''>";
-							foreach($elements as $choix => $checked){
-						 $ischecked =  $checked  ? "checked = 'checked' " : " "  ;
-						echo " <input type = 'checkbox' name = 'choix ' $ischecked >";
-						echo "<label for = 'choix'>$choix</label><br> ";
-								}
+		function genererCheckbox($elements) {
+			
+			$result =" <form method = 'get' action= ''>";
+					foreach($elements as $choix => $checked){
+						$ischecked =  $checked  ? "checked = 'checked' " : " "  ;
+						$result.= " <input type = 'checkbox' name = 'choix ' $ischecked >";
+						$result.="<label for = 'choix'>$choix</label><br> ";
 						
-						echo "</form>";
-					};
-					genererCheckbox($elements);
+								}
+									
+				 $result.="</form>";
+					 return $result;
+				};
+
+		echo genererCheckbox($elements);
 
 
-					
+		
