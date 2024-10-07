@@ -14,7 +14,7 @@ function afficherRadio ($nomRadios){
 
       foreach( $nomRadios as $value ){
     
-     echo "<input type ='radio' id='$value' name='sexe' value='$value'   />" . $value . '<br>';
+    $result.= "<input type ='radio' id='$value' name='sexe' value='$value'   />" . $value . '<br>';
 
     };
 

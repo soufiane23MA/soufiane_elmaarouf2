@@ -18,29 +18,22 @@ complet qui contient les informations suivantes : champs de texte avec nom, pré
 Le formulaire devra également comporter un bouton permettant de le soumettre à un traitement
 de validation (submit).</p>
 <h2>Resultat</h2>	
-<p>Aujourd'hui nous sommes le <?php echo date('d/m/Y h:i:s') ?>.</p>
+<p>Aujourd'hui nous sommes le <?php echo date('d/m/Y') ?>.</p>
 
 <?php
 echo 
 "
 <html>
 <body>
+
 	<form action='' methode = 'get'>
 	<label for =' nom'> nom : </label><br>
 	<input  type ='text' name ='nom' id ='nom'><br>
 		<label for ='prenom'>Prenom :</label><br>
 	<input  type ='text' name ='prenom' id ='prenom'><br>
 		<label for ='email'>Email :</label><br>
-	<input  type ='email' name ='Email' id =' email:'><br>
+	<input  type ='email' name ='Email' id ='email:'><br>
 
-
-
-
-
-	
-	
-	
-	
 
 	</form>"
 

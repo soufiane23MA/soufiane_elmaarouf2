@@ -6,14 +6,8 @@ formaterDateFr("2018-02-23");
 
 Affichage
 vendredi 23 février 2018</p>
-<h2>Resultat</h2>
+<h2>Resultat </h2>
 
 <?php
-
-function formatDateFr (){
-    
-}
-
-
-
+setlocale(LC_TIME, 'fr_FR.UTF-8');
   
