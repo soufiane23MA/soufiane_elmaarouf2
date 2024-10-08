@@ -10,27 +10,26 @@ genererCheckbox($elements);
 
 // déclarer les choix avec un tableau associatf (choix => vrais/faux)
 
-		$elements = [
-			"Choix 1" => false , 
-			"Choix 2" => false , 
-			"Choix 3" => true
-		];
+	$elements = [
+		"Choix 1" => false , 
+		"Choix 2" => false , 
+		"Choix 3" => true
+	];
 
-		function genererCheckbox($elements) {
+function genererCheckbox($elements) {
 			
-			$result =" <form method = 'get' action= ''>";
-					foreach($elements as $choix => $checked){
-						$ischecked =  $checked  ? "checked = 'checked' " : " "  ;
-						$result.= " <input type = 'checkbox' name = 'choix ' $ischecked >";
-						$result.="<label for = 'choix'>$choix</label><br> ";
-						
-								}
-									
-				 $result.="</form>";
-					 return $result;
-				};
+	$result =" <form method = 'get' action= ''>";
+	foreach($elements as $choix => $checked){
+		$ischecked =  $checked  ? "checked = 'checked' " : " "  ;
+		$result.= " <input type = 'checkbox' name = 'choix ' $ischecked >";
+		$result.="<label for = 'choix'>$choix</label><br> ";
+ 	}
+							
+		$result.="</form>";
+		return $result;
+ };
 
-		echo genererCheckbox($elements);
+ echo genererCheckbox($elements);
 
 
 		

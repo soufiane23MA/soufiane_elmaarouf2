@@ -11,10 +11,13 @@ MON TEXTE EN PARAMETRE</p>
 
 $texte= "« Mon texte en paramètre »";
 
- // chnagement de style de la variable
+// chnagement de style de la variable;
+
 function convertirMajRouge($texte){
+    
     $texte2 = mb_strtoupper($texte);
     return "<p  style = 'color: red';> $texte2 </p>";
+
 };
 
 echo convertirMajRouge($texte);

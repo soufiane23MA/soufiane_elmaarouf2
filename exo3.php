@@ -4,4 +4,5 @@ dans un nouvel onglet (_blank).</p>
 <h2>Resultat</h2>
 
 <?php
+
 echo"<a href='https://elan-formation.fr/accueil' target = _blank >Elan Formation</a>";

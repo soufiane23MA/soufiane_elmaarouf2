@@ -11,14 +11,16 @@ vendredi 23 février 2018
 <?php
  
 function formaterDateFr($dateString){
-	
-			$date = new DateTime($dateString);
-			
-			$formatter = new intlDateFormatter ('fr-FR',intlDateFormatter::FULL,intlDateFormatter:: NONE);
 
-			$formatter -> setPattern('EEEE d MMMM y');
-			
-			return  $formatter ->format($date);
-			};
+	$date = new DateTime($dateString);
 
-			echo formaterDateFr("2018-02-13");
+	$formatter = new IntlDateFormatter (
+	'fr_FR',
+	IntlDateFormatter::FULL,
+	IntlDateFormatter:: NONE);
+
+ $formatter -> setPattern('EEEE d MMMM y');
+	return  $formatter ->format($date);
+};
+
+echo formaterDateFr("2018-02-13");

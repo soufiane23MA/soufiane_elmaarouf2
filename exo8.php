@@ -10,6 +10,7 @@ repeterImage($url,4);
 
 
 function repetImage ( ) {
+	
 	$url = "<img src='http://my.mobirise.com/data/userpic/764.jpg'> ";
 
 	  echo str_repeat($url,4);

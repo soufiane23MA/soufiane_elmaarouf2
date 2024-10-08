@@ -26,39 +26,37 @@ USA Washington Lien</p>
                 "Italie" =>"Rome"
             ];
 
-						function afficherTableHTML($capitales){
+function afficherTableHTML($capitales){
 
-   asort($capitales);
-	 // classer par ordre alphabétique!
-	 // ajouter la colones avec les liens
-	 // ajouter la nouvelle variable avec l'ancre
+  asort($capitales);
+  // classer par ordre alphabétique!
+  // ajouter la colones avec les liens
+  // ajouter la nouvelle variable avec l'ancre
 
 
-                $result = "<table style='border: 1px solid black; border-collapse: collapse; width: 50%;'>";
-            $result .="<tr>
-                    <th style='border: 1px solid black; padding: 8px;'>Pays</th>
-                    <th style='border: 1px solid black; padding: 8px;'>Capitale</th>
+  $result = "<table style='border: 1px solid black; border-collapse: collapse; width: 50%;'>";
+  $result .="<tr>
+      <th style='border: 1px solid black; padding: 8px;'>Pays</th>
+      <th style='border: 1px solid black; padding: 8px;'>Capitale</th>
+      <th style='border: 1px solid black; padding: 8px;'>Lien WIki</th>
+      </tr>";
+  foreach ($capitales as $pays => $capital){
+      $paysMaj = strtoupper($pays);
+      $lien = "<a href='https://fr.wikipidia.org/wiki';";
 
-                    <th style='border: 1px solid black; padding: 8px;'>Lien WIki</th>
-              </tr>";
-                foreach ($capitales as $pays => $capital){
+      $result .= "<tr>";
+      $result .= "<td style='border: 1px solid black; padding: 8px;'>$paysMaj</td>";
+      $result .= "<td style='border: 1px solid black; padding: 8px;'>$capital</td>";
+      $result .= "<td style='border: 1px solid black; padding: 8px;'><a href= $lien target = _blank>LIEN</a></td>";
+      $result .="</tr>";
+  };
+    
+  $result .= "</table>";
+  return $result;
 
-                      $paysMaj = strtoupper($pays);
-                      $lien = "<a href='https://fr.wikipidia.org/wiki';";
+};
 
-                        $result .= "<tr>";
-                        $result .= "<td style='border: 1px solid black; padding: 8px;'>$paysMaj</td>";
-                        $result .= "<td style='border: 1px solid black; padding: 8px;'>$capital</td>";
-                        $result .= "<td style='border: 1px solid black; padding: 8px;'><a href= $lien target = _blank>LIEN</a></td>";
-                    $result .="</tr>";
-                  };
-                  
-                  $result .= "</table>";
-                  return $result;
-
-            };
-
-            echo afficherTableHTML($capitales);
+ echo afficherTableHTML($capitales);
 
 
           

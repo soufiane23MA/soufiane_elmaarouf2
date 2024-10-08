@@ -13,18 +13,17 @@ $elements = ["Monsieur","Madame","Mademoiselle"];
 
 function alimenterListeDeroulante($elements){
 
-		$result = "<form method='get' action=''>";
-		$result.= "<select name='element' id= 'element'>";
-			 foreach($elements as $element){
+	$result = "<form method='get' action=''>";
+	$result.= "<select name='element' id= 'element'>";
+			foreach($elements as $element){
 
-				  $result .=  "<option value='$element'>$element</option>";
-								
-					 "</select>";
-					
-					};
+				$result .=  "<option value='$element'>$element</option>";
 							
-							$result.= 	"</form>";
-							return $result;
-			};
+				"</select>";	
+				};
+						
+				$result.= 	"</form>";
+				return $result;
+		};
 			echo alimenterListeDeroulante($elements);
 			

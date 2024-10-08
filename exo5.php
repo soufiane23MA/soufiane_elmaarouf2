@@ -14,16 +14,15 @@ $nomsInput = ["Nom","Prénom","Ville"];
 
 function afficherInput($nomsInput){
 
-		$result = "<form>";
-		foreach($nomsInput as $input){
-			echo "<label for='$input'>$input</label> <br>" ;
-			echo "<input type='text' name='input' id=$input><br>";
-		};
+	$result = "<form>";
+	foreach($nomsInput as $input){
+		$result .= "<label for='$input'>$input</label> <br>" ;
+		$result .=  "<input type='text' name='input' id=$input><br>";
+	};
 
-	$result .= "</form>";
+		$result .= "</form>";
+		return $result;
+}; 
 
-	return $result;
-	}; 
-
-	 echo afficherInput($nomsInput);
+  echo afficherInput($nomsInput);
 

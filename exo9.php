@@ -12,13 +12,11 @@ $nomRadios = ["Masculin","Feminin","Autres"];
 
 function afficherRadio ($nomRadios){
 
-      foreach( $nomRadios as $value ){
-    
-    $result.= "<input type ='radio' id='$value' name='sexe' value='$value'   />" . $value . '<br>';
-
-    };
-
-    return $result;
- };
+  foreach( $nomRadios as $value ){
+    $result.= "<input type ='radio' id='$value' name='sexe' value='$value' />" . $value . '<br>';
+  };
+  return $result;
+  
+};
   echo afficherRadio($nomRadios );
 
