@@ -1,13 +1,24 @@
-<h1>exercice11</h1>
-<p> Ecrire une fonction personnalisée qui affiche une date en français (en toutes lettres) à partir d’une 
+<h1>exercice1</h1>
+<p>Ecrire une fonction personnalisée qui affiche une date en français (en toutes lettres) à partir d’une
 chaîne de caractère représentant une date.
 Exemple :
 formaterDateFr("2018-02-23");
-
 Affichage
-vendredi 23 février 2018</p>
-<h2>Resultat </h2>
+vendredi 23 février 2018
+ </p>
+<h2>Resultat</h2>
 
 <?php
-setlocale(LC_TIME, 'fr_FR.UTF-8');
-  
+ 
+function formaterDateFr($dateString){
+	
+			$date = new DateTime($dateString);
+			
+			$formatter = new intlDateFormatter ('fr-FR',intlDateFormatter::FULL,intlDateFormatter:: NONE);
+
+			$formatter -> setPattern('EEEE d MMMM y');
+			
+			return  $formatter ->format($date);
+			};
+
+			echo formaterDateFr("2018-02-13");
